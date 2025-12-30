@@ -3,7 +3,10 @@ import {
   Target, 
   Video, 
   Users, 
-  Sparkles 
+  Sparkles, 
+  GitGraph,
+  Scale,
+  BarChart
 } from "lucide-react";
 
 const services = [
@@ -31,6 +34,11 @@ const services = [
     icon: Sparkles,
     title: "Brand Positioning",
     description: "Strategic brand development that differentiates you and resonates with your ideal audience.",
+  },
+  {
+    icon: BarChart,
+    title: "Brand Building",
+    description: "Strategic brand building is about more than visuals, it’s about creating a clear identity that sets you apart and speaks directly to the right audience.",
   },
 ];
 

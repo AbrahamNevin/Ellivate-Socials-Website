@@ -18,21 +18,41 @@ const Contact = () => {
     goal: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  try {
+    const res = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (!res.ok) throw new Error("Failed");
 
     toast({
       title: "Message Sent!",
       description: "We'll get back to you within 24 hours.",
     });
 
-    setFormData({ name: "", email: "", business: "", goal: "" });
+    setFormData({
+      name: "",
+      email: "",
+      business: "",
+      goal: "",
+    });
+  } catch (err) {
+    toast({
+      title: "Error",
+      description: "Something went wrong. Try again.",
+      variant: "destructive",
+    });
+  } finally {
     setIsSubmitting(false);
-  };
+  }
+};
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -82,7 +102,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Email</p>
-                      <p className="text-foreground font-medium">hello@ellivatesocials.com</p>
+                      <p className="text-foreground font-medium">elivate.socials@gmail.com</p>
                     </div>
                   </div>
 
@@ -92,7 +112,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Phone</p>
-                      <p className="text-foreground font-medium">+1 (555) 123-4567</p>
+                      <p className="text-foreground font-medium">+91 9359217607</p>
                     </div>
                   </div>
 
@@ -110,7 +130,7 @@ const Contact = () => {
                 {/* WhatsApp Button */}
                 <div className="mt-10">
                   <Button variant="outline" size="lg" className="gap-2" asChild>
-                    <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/9359217607" target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="w-5 h-5" />
                       Chat on WhatsApp
                     </a>

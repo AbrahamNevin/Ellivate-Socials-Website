@@ -17,12 +17,12 @@ const HeroSection = () => {
       <div className="container-section relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-up">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm text-muted-foreground">
               Performance Marketing Agency
             </span>
-          </div>
+          </div> */}
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground leading-tight mb-6 animate-fade-up delay-100">
@@ -55,9 +55,9 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-20 pt-12 border-t border-border animate-fade-up delay-400">
             {[
-              { value: "50+", label: "Brands Scaled" },
-              { value: "3M+", label: "Reach Generated" },
-              { value: "10x", label: "Average ROI" },
+              { value: "4", label: "Brands Scaled" },
+              { value: "10M+", label: "Reach Generated" },
+              { value: "10x", label: "Average ROAS" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-3xl md:text-4xl font-heading font-bold text-primary mb-2">

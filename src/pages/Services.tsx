@@ -50,6 +50,12 @@ const services = [
     description: "Comprehensive insights and transparent reporting that keeps you informed and in control.",
     features: ["Performance Dashboards", "Monthly Reports", "ROI Analysis", "Growth Recommendations"],
   },
+  {
+    icon: BarChart3,
+    title: "Analytics & Reporting",
+    description: "Comprehensive insights and transparent reporting that keeps you informed and in control.",
+    features: ["Performance Dashboards", "Monthly Reports", "ROI Analysis", "Growth Recommendations"],
+  },
 ];
 
 const Services = () => {

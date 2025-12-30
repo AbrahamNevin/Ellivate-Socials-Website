@@ -2,19 +2,19 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Ellivate Socials transformed our digital presence. Our leads increased by 300% in just three months.",
-    author: "Sarah M.",
-    role: "CEO, Tech Startup",
+    quote: "Ellivate Socials transformed our digital presence. Delivered ROAS of 14 in just three months.",
+    author: "Sheryash Hindocha. ",
+    role: "Founder, TRICOTE",
   },
   {
     quote: "Finally, an agency that delivers real results. No fluff, just pure performance and growth.",
-    author: "James K.",
-    role: "Founder, E-commerce Brand",
+    author: "Harsh ",
+    role: "Managing Director , Insurance and solution",
   },
   {
     quote: "Their strategic approach to our campaigns exceeded all expectations. Highly recommended.",
-    author: "Priya R.",
-    role: "Marketing Director",
+    author: "Arjun Tare.",
+    role: "CEO, V1 E-sports",
   },
 ];
 
