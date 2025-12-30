@@ -1,73 +1,80 @@
-# Welcome to your Lovable project
+# Ellivate Growth Engine
 
-## Project info
+Ellivate Growth Engine is a full-stack web application built for **Ellivate Socials**, designed to capture and manage inbound leads through a professional contact form with real email delivery.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The project consists of a **React (Vite) frontend** and a **Node.js + Express backend** integrated with **Resend** for transactional email handling.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- Responsive contact form
+- Real email notifications for new leads
+- Secure backend API (API keys not exposed)
+- Toast-based user feedback on form submission
+- Clean and scalable project structure
+- Ready for deployment and future integrations
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech Stack
 
-**Use your preferred IDE**
+### Frontend
+- React (Vite)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Lucide Icons
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Backend
+- Node.js
+- Express
+- Resend (Email API)
+- dotenv
+- CORS
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+2. Frontend Setup
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Frontend will run on:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+http://localhost:5173
 
-**Use GitHub Codespaces**
+3. Backend Setup
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+cd server
+npm install
+```
 
-## What technologies are used for this project?
+Create a .env file inside the server folder:
 
-This project is built with:
+RESEND_API_KEY=your_resend_api_key
+PORT=5000
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
+Start the backend server:
+```bash
+npm run dev
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Backend will run on:
 
-## Can I connect a custom domain to my Lovable project?
+http://localhost:5000
 
-Yes, you can!
+Contact Form Flow
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+User submits the contact form
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Frontend sends a POST request to /contact
+
+Backend processes the request
+
+Resend sends a notification email to the admin inbox
+
+User receives success feedback via toast
+
